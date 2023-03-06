@@ -11,10 +11,6 @@ li {
   list-style: none;
 }
 
-ul, ol {
-  margin-bottom: 20px;
-}
-
 h1,
 h2,
 h3,
@@ -25,50 +21,58 @@ h5,
 .h3,
 .h4,
 .h5 {
-  font-family: $baseFont;
-  color: #000;
+  font-family: 'Heebo', sans-serif;
+  color: $colorBlack;
   text-transform: none;
   line-height: 1.42;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
 }
 
 h1,
 .h1 {
-  font-size: rem(40px);
+  font-size: 44px;
 }
 
 h2,
 .h2 {
-  margin-top: 30px;
-  font-size: rem(32px);
+  font-size: 32px;
 }
 
 h3,
 .h3 {
-  margin-top: 30px;
-  font-size: rem(22px);
+  font-size: 28px;
+
+  @media(max-width:1024px) {
+    font-size: 18px;
+  }
 }
 
 h4,
 .h4 {
-  margin-top: 30px;
   font-size: rem(18px);
 }
 
 h5,
 .h5 {
-  margin-top: 30px;
   font-size: rem(16px);
 }
 
 a {
-  color: $linkColor;
+  color: $colorWhite;
   text-decoration: none;
   outline: none;
+
+
 }
 
 img {
   max-width: 100%;
   height: auto;
+}
+
+button,
+button:active,
+button:focus  {
+  border:none;
 }

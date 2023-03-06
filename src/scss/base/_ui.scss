@@ -1,0 +1,35 @@
+.ui-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 9999px;
+    padding-right: 24px;
+    padding-left: 24px;
+
+    @media(max-width:500px) {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+.ui-breadcrumbs {
+    margin-bottom: 32px;
+
+    &__current {
+        color: $colorWhite;
+    }
+
+    &__link {
+        opacity: 0.5;
+        &::after{
+            content: "/";
+            margin-left: 4px;
+            margin-right: 4px;
+            color: $colorWhite
+        }
+    }
+
+    img {
+        margin-right: 8px;
+    }
+}

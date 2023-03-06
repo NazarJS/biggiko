@@ -1,0 +1,241 @@
+.header {
+    position: relative;
+    padding: 16px 0;
+    background-color: $colorBlack;
+
+    &__logo {
+        max-width: 80px;
+        max-height: 50px;
+        margin-right: 32px;
+        
+    }
+
+    &__body {
+        display: flex;
+        align-items: center;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        @media(max-width:1024px) {
+            justify-content: flex-end;
+        }
+    }
+
+    &__menu {
+        @media(max-width:1024px) {
+            display: none;
+        }
+    }
+
+    &-burger {
+        display: none;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        margin-right: 12px;
+    
+        &__span {
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          left: 0;
+          top: 9px;
+          background-color: #fff;
+          -webkit-transition: .3s;
+          transition: .3s;
+
+         
+        }
+    
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          left: 0;
+          top: 0;
+          background-color: #fff;
+          -webkit-transition: .3s;
+          transition: .3s;
+
+          
+        }
+    
+        &::after {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          left: 0;
+          bottom: 0;
+          background-color: #fff;
+          -webkit-transition: .3s;
+          transition: .3s;
+
+          
+        }
+
+        
+    
+        @media(max-width:1024px) {
+          display: block;
+        }
+    }
+
+    .mobile-menu {
+        .menu__wrapper {
+                display: block;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                color: $colorBlack;
+                padding: 20px;
+                background-color: $colorWhite;
+        }
+
+        .menu__list {
+            border-bottom: 1px solid #E5E5E5;
+            margin-bottom: 16px;
+        }
+
+        .header__menu {
+            display: block;
+        }
+
+        .menu__link {
+            color: $colorBlack;
+        }
+
+        .menu__item {
+            display: block;
+            margin-bottom: 16px;
+        }
+
+        .list-links {
+            display: block;
+            border-bottom: 1px solid #E5E5E5;
+            margin-bottom: 16px;
+
+            &__item {
+                margin-bottom: 16px;
+            }
+        }
+
+        .header-burger {
+            &__span {
+                transform: scale(0);
+            }
+
+            &::before {
+                transform: rotate(45deg);
+                top: 9px;
+            }
+
+            &::after {
+                transform: rotate(-45deg);
+                bottom: 9px;
+            }
+        }
+    }
+
+    &-block{
+        &__buttons {
+            .button__download{
+                line-height: 0;
+            }
+        }
+    }
+
+    .list-links {
+        display: none;
+    }
+}
+
+.menu {
+    &__list {
+
+    }
+
+    &__item {
+        display: inline-block;
+        margin-right: 16px;
+    }
+
+    &__link {
+        font-weight: 700;
+    }
+}
+
+.block__buttons {
+    display: flex;
+    gap: 24px;        
+}
+
+.button{
+    &__download {
+        max-width: 156px;
+        flex: 0 0 156px;
+        padding-top: 17px;
+        padding-bottom: 17px;
+        background-color: $colorWhite;
+        color: $colorBlack;
+        font-weight: 700;
+        // line-height: 0;
+        transition: 0.3s;
+
+        @media(max-width:576px) {
+            flex: 0 0 110px;
+            max-width: 110px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__register {
+        width: 100%;
+        max-width: 145px;
+        flex: 0 0 145px;
+        background: linear-gradient(101.06deg, #FF8B20 4.71%, #F85900 98.47%);
+        transition: 0.3s;
+       
+        @media(max-width:576px) {
+            flex: 0 0 100px;
+            max-width: 100px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+
+    &__subtitle {
+        display: block;
+        font-size: 10px;
+        font-weight: 300;
+    }
+}
+
+.header-block__buttons {
+    flex: 0 0 35%;
+    justify-content: flex-end;
+}
+
+.logo {
+    line-height: 0;
+
+    @media(max-width:576px) {
+        max-width: 50px;
+    }
+}

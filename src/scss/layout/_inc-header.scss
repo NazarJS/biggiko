@@ -1,7 +1,7 @@
 .header {
     position: relative;
     padding: 16px 0;
-    background-color: $colorBlack;
+    background-color: var(--background-dark);
 
     &__logo {
         max-width: 80px;
@@ -75,13 +75,9 @@
           bottom: 0;
           background-color: #fff;
           -webkit-transition: .3s;
-          transition: .3s;
-
-          
+          transition: .3s;          
         }
 
-        
-    
         @media(max-width:1024px) {
           display: block;
         }
@@ -94,9 +90,11 @@
                 top: 100%;
                 left: 0;
                 width: 100%;
-                color: $colorBlack;
+                color: var(--color-txt-dark);
                 padding: 20px;
-                background-color: $colorWhite;
+                background-color: var(--background-light);
+                max-height: calc(100vh - 80px);
+                overflow-y: auto;
         }
 
         .menu__list {
@@ -109,10 +107,10 @@
         }
 
         .menu__link {
-            color: $colorBlack;
+            color: var(--color-txt-dark);
         }
 
-        .menu__item {
+        .menu-item {
             display: block;
             margin-bottom: 16px;
         }
@@ -154,22 +152,58 @@
 
     .list-links {
         display: none;
+
+        &__link {
+            &:hover {
+                text-decoration: underline;
+            }
+        }
     }
 }
 
 .menu {
-    &__list {
-
-    }
-
-    &__item {
+    &-item {
+        position: relative;
         display: inline-block;
         margin-right: 16px;
+
+        &:hover {
+
+            .sub-menu {
+                display: block;
+            }
+
+            .list-links {
+                display: block;
+                background-color: var(--background-light);
+                height: 100%;
+                width: 200px;
+                padding: 16px;
+
+                &__item {
+                    margin-bottom: 8px;
+                }
+            }
+        }
     }
 
     &__link {
         font-weight: 700;
     }
+}
+
+.menu-item-has-children {
+    &::before {
+
+    }
+}
+
+.sub-menu {
+    position: absolute;
+    top: 100%;
+   
+    display: none;
+    color: var(--color-txt-light);
 }
 
 .block__buttons {
@@ -183,8 +217,8 @@
         flex: 0 0 156px;
         padding-top: 17px;
         padding-bottom: 17px;
-        background-color: $colorWhite;
-        color: $colorBlack;
+        background-color: var(--background-light);
+        color: var(--color-txt-dark);
         font-weight: 700;
         // line-height: 0;
         transition: 0.3s;
@@ -197,7 +231,7 @@
         }
 
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
     }
 
@@ -216,7 +250,7 @@
         }
 
         &:hover {
-            transform: scale(1.2);
+            transform: scale(1.1);
         }
     }
 
@@ -224,6 +258,13 @@
         display: block;
         font-size: 10px;
         font-weight: 300;
+        line-height: 1;
+    }
+
+    &__name {
+        text-align: left;
+        font-size: 16px;
+        line-height: 1;
     }
 }
 

@@ -1,6 +1,6 @@
 .footer {
     padding:60px 0;
-    background-color: $colorBlack;
+    background-color: var(--background-main);
     border-radius: 32px 32px 0px 0px;
 
     @media(max-width:1024px) {

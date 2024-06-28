@@ -1,0 +1,140 @@
+.rating {
+    margin-bottom: 80px;
+    padding: 20px;
+    background-color: var(--color-primary);
+    border-radius: 16px;
+
+    @media(max-width:1024px) {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        margin-bottom: 20px;
+        font-size: 24px;
+        font-weight: 700;
+
+        &--accent {
+            color: var(--color-accent);
+        }
+    }
+
+    &__table {
+        display: flex;
+        flex-wrap: wrap;
+        border-radius: 16px;
+        overflow: hidden;
+        
+    }
+
+    &__img {
+        margin-right: 10px;
+    }
+
+    &__stars {
+        margin-left: 20px;
+
+        &--number {
+            font-weight: 700;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        flex: 0 0 33.3%;
+        max-width: 33.3%;
+        font-weight: 700;
+        background-color: #1D1E22;
+
+       
+
+        @media(min-width:1024px) {
+            &:nth-child(6n+1){
+                background-color: var(--color-secondary);
+            }
+    
+            &:nth-child(6n+2){
+                background-color: var(--color-secondary);
+            }
+    
+            &:nth-child(6n+3){
+                background-color: var(--color-secondary);
+            }
+        }
+
+        @media(max-width:1024px) {
+            flex: 0 0 100%;
+            max-width: 100%;
+            justify-content: space-between;
+            font-size: 14px;
+            padding: 14px 10px;
+            // align-items: center;
+
+            &:nth-child(odd){
+                background-color: var(--color-secondary);
+            }
+        }
+    }
+
+    &__name {
+        display: flex;
+        align-items: center;
+        max-width: 190px;
+    }
+
+    &__wrap {
+        display: flex;
+        align-items: center;
+        flex: 0 0 50%;
+
+        &:last-child {
+            justify-content: flex-end;
+            column-gap: 15px;
+
+            @media(max-width:1024px) {
+                display: none;
+            }
+        }
+
+        @media(max-width:1024px) {
+            flex: 0 0 100%;
+        }
+    }
+
+    &__txt {
+        font-size: 14px;
+    }
+    
+    &__number {
+        font-size: 24px;
+        font-weight: 700;
+
+        img {
+            display: inline-block;
+            vertical-align: text-top;
+        }
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+
+    
+
+    .ui-btn--dowload  {
+        width: 100%;
+        max-width: 160px;
+    }
+
+    .ui-btn__title {
+        margin-right: 15px;
+    }
+}

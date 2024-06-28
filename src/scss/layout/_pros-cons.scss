@@ -1,0 +1,118 @@
+.pros-cons {
+    margin-bottom: 80px;
+
+    @media(max-width:1024px) {
+        margin-bottom: 40px;
+    }
+
+    &__title {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 20px;
+
+        &--accent {
+            color: var(--color-accent);
+        }
+    }
+
+    &__item {
+        border-radius: 12px;
+        background-color: #fff;
+        overflow: hidden;
+
+        &--reverse {
+            .pros-cons__top {
+                background-color: #101115;
+            }
+
+            .pros-cons__body {
+                background-color: #232429;
+            }
+
+            ul {
+                li {
+                    &:nth-child(2n) {
+                        background-color: #1D1E22;
+                    }
+                }
+            }
+        }
+    }
+
+    &__top {
+        padding: 20px;
+        background-color: #289AEC;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    &__body {
+        ul {
+            li {
+                padding: 20px;
+                font-weight: 600;
+                color: #289AEC;
+
+                @media(max-width:1024px) {
+                    font-size: 14px;
+                }
+                &:nth-child(2n) {
+                    background-color: #EDF6FC;
+                }
+
+                &::before {
+                    content: '\2713';
+                    display: inline-block;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                    vertical-align: middle;
+                    width: 16px;
+                    height: 16px;
+                    font-size: 12px;
+                    color: #ffffff;
+                    background-color:#289AEC;
+                    text-align: center;
+                }
+                
+            }
+        }
+    }
+
+    &__item {
+        border-radius: 12px;
+        background-color: #fff;
+        overflow: hidden;
+
+        @media(max-width:1024px) {
+            margin-bottom: 40px;
+        }
+
+        &--reverse {
+            .pros-cons__top {
+                background-color: #101115;
+            }
+
+            .pros-cons__body {
+                background-color: #232429;
+            }
+
+            ul {
+                li {
+                    color:#ffffff;
+
+                    &:nth-child(2n) {
+                        background-color: #1D1E22;
+                    }
+
+                    &::before {
+                        content: '\2A2F';
+                        background-color: #ffffff;
+                        color: #101115;
+                        font-size: 16px;
+                        line-height: 0.9;
+                    }
+                }
+            }
+        }
+    }
+}

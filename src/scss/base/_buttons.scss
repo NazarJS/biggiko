@@ -1,0 +1,31 @@
+.ui-btn {
+    width: 100%;
+    height: 46px;
+    line-height: 44px;
+    border: none;
+    outline: none;
+    color: #FF833D;
+    background-color: #FFF;
+    border: 1px solid #FF833D;
+    border-radius: 6px;
+    transition: 0.3s;
+    font-weight: 700;
+    cursor: pointer;
+
+    @media(max-width:992px) {
+        height: 34px !important;
+        line-height: 32px !important;
+        font-size: 14px;
+    }
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    &__bg {
+        height: 48px;
+        line-height: 46px;
+        color: #fff;
+        background-color: #FF833D;
+    }
+}

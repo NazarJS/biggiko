@@ -1,6 +1,5 @@
 p {
-  margin-top: 0;
-  margin-bottom: 20px;
+
 }
 
 ul,
@@ -10,6 +9,8 @@ li {
   margin: 0px;
   list-style: none;
 }
+
+
 
 h1,
 h2,
@@ -22,53 +23,62 @@ h5,
 .h4,
 .h5 {
   font-family: 'Heebo', sans-serif;
-  color: var(--color-txt-light);
   text-transform: none;
-  line-height: 1.42;
+  line-height: 1.2;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 0;
   margin-top: 0;
+  color: #000;
 }
 
 h1,
 .h1 {
-  font-size: 44px;
-
-  @media(max-width:1024px) {
-    font-size: 32px;
-  }
-}
-
-h2,
-.h2 {
   font-size: 32px;
+  margin-bottom: 20px;
 
   @media(max-width:1024px) {
     font-size: 24px;
   }
 }
 
+h2,
+.h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+
+  @media(max-width:1024px) {
+    font-size: 20px;
+  }
+}
+
 h3,
 .h3 {
-  font-size: 24px;
+  font-size: 20px;
+
+  @media(max-width:1024px) {
+    font-size: 18px;
+  }
+}
+
+h4,
+.h4 {
+  font-size: 18px;
 
   @media(max-width:1024px) {
     font-size: 16px;
   }
 }
 
-h4,
-.h4 {
-  font-size: rem(18px);
-}
-
 h5,
 .h5 {
-  font-size: rem(16px);
+  font-size: 16px;
+
+  @media(max-width:1024px) {
+    font-size: 14px;
+  }
 }
 
 a {
-  color: $colorWhite;
   text-decoration: none;
   outline: none;
 
@@ -84,5 +94,28 @@ button,
 button:active,
 button:focus  {
   border:none;
-  color: var(--color-txt-light);
+  color: var(--color-txt-white);
+}
+
+ol {
+  counter-reset: myCounter;
+
+  li {
+      margin-bottom: 20px;
+      
+      &::before {
+          counter-increment: myCounter;
+          content:counter(myCounter);
+          
+          background: var(--color-accent);
+          display: inline-block;
+          text-align: center;
+          
+          margin-right: 5px;
+          line-height: 22px;
+          height: 22px;
+          width: 22px;
+          border-radius: 6px;
+      }
+  }
 }

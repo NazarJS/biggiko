@@ -1,16 +1,87 @@
-$colorBlack:#0D0C0C;
-$colorOrange:#FF6B00;
-$colorWhite:#ffffff;
-
 :root {
-    --color-primery:#FF6B00;
-    --color-txt-light:#ffffff;
-    --color-txt-dark:#0D0C0C;
-    --color-data:#808080;
-    --border-radius:100px;
-    --background-dark:#0D0C0C;
-    --background-light:#ffffff;
-    --main-gradient:linear-gradient(101.06deg,#ff8b20 4.71%,#f85900 98.47%);
-    --background-main:#0D0C0C;
-    --background-primery:#FF6B00;
+
+  --body-bg-color:#07070B;
+
+  --color-primary: #191A1E; // main color
+
+  --color-secondary:#232429;
+
+  --color-accent:#4FB5FF;
+  
+  --color-txt-white:#ffffff; // color light
+
+  --header-bg:#101115;
+
+  --footer-bg:#101115;
+
+ 
+
+  //btn download
+
+  --btn-download-bg:#FFFFFF1A;
+
+  --btn-donload-color: #ffffff;
+
+  
+
+
+
+
+
+  --header-color:#fff;
+  
+  --color-txt-dark:#ffffff;  // color dark
+
+  
+
+
+
+  //btn register
+  --btn-register-bg:#F2245e; 
+
+  --btn-register-icon: #ffffff;
+
+  --btn-register-color: #ffffff;
+
+
+
+
+
+
+//btn login
+
+  --btn-login-color: #ffffff;
+
+  --btn-login-border: #ffffff;
+
+  --btn-login-bg: #100532;
+  
+// --btn-span: black;
+
+  --first-screen: url('../images/bg-main.png');
+
+  --first-screen-mobile: url('../images/bg-mobile.png');
+
+  --first-screen-other: url('../images/bg-main.png');
+
+
+//btn android
+
+  --btn-android-bg: #4FB5FF;
+
+  --btn-android-color: #ffffff;
+
+//btn ios
+
+  --btn-ios-bg:#ffffff;
+
+  --btn-ios-color: #4FB5FF;
+
+  //promo
+
+  --btn-promo-bg:#289AEC;
+
+  --btn-promo-color:#ffffff;
+  
 }
+
